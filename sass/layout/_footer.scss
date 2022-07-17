@@ -7,6 +7,10 @@
   display: flex;
   align-items: baseline;
 }
+.logo__footer.link {
+  display: flex;
+  margin-bottom: 20px;
+  }
 
 .logo__footer {
   display: flex;
@@ -18,7 +22,7 @@
   color: $accent-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&__footer--accent-color {
+&--accent-color {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -27,14 +31,19 @@
   color: $prymari-white-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-&__footer:hover,
-&__footer:focus {
+
+&:hover,
+&:focus {
   color: $prymari-white-color;
 }
-&__footer--accent-color:hover,
-&__footer--accent-color:focus {
+&--accent-color:hover,
+&--accent-color:focus {
   color: $accent-color;
 }
+
+&--accent-color:hover .logo__footer,
+&--accent-color:focus .logo__footer {
+  color: $title-text-color;}
 }
 
 .adress-menu__item{
@@ -44,10 +53,27 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: $prymari-white-color;
 }
 
-.adress-menu__mail,
+.adress-menu__mail{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+ &:focus {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $accent-color;}}
+
+
 .adress-menu__tel {
   font-style: normal;
   font-weight: 400;
@@ -56,17 +82,15 @@
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.adress-menu__mail:hover,
-.adress-menu__mail:focus,
-.adress-menu__tel:hover,
-.adress-menu__tel:focus {
+
+  &:hover,
+  &:focus {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: $accent-color;
-}
+  color: $accent-color;}
+  }
 
 .footer-soc {
   margin-left: 70px;
@@ -149,12 +173,13 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
-}
 
-.send__label .send__input:focus,
- .send__label .send__input:checked {
+
+&:focus,
+&:checked {
   border: 2px solid #2196f3;
   outline: none;
+}
 }
 
 .button-send {

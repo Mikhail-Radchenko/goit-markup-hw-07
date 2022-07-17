@@ -29,7 +29,7 @@
   min-height: 581px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  transition: transform $transition;
   background-color: #fff;
  }
 
@@ -139,15 +139,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color:  $p-text-color;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: $p-text-color;
-
-& a {
   cursor: pointer;
-  color: rgba(33, 150, 243, 1);
-}
 }
 
 .modal-form-icon {
